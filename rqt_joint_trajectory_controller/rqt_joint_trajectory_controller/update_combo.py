@@ -36,7 +36,7 @@ def update_combo(combo, new_vals):
         selected_id = -1
         try:
             selected_id = new_vals.index(selected_val)
-        except (ValueError):
+        except ValueError:
             combo.setCurrentIndex(-1)
 
         # Re-populate items
@@ -48,7 +48,8 @@ def update_combo(combo, new_vals):
 
 
 def _is_permutation(a, b):
-    """Check is arrays are permutation of each other.
+    """
+    Check is arrays are permutation of each other.
 
     @type a [] first array with values to compare with the second one.
     @type b [] second array with values to compare with the first one.
